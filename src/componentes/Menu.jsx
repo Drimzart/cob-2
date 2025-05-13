@@ -38,7 +38,7 @@ export default function Menu() {
         {/* BOTÃO DE AGENDAMENTO */}
         <div>
           <a href="https://wa.me/SEUNUMEROAQUI" target="_blank" rel="noopener noreferrer">
-            <button className="flex items-center gap-2 px-6 py-2.5 rounded-full text-white font-medium text-sm shadow-md bg-gradient-to-r from-[#053f79] to-[#1b5ea9] hover:scale-105 transition-all">
+            <button className="flex items-center gap-2 px-8 py-3 rounded-full text-white font-semibold text-base shadow-lg bg-[#053f79] hover:bg-[#0d4c91] transition-transform hover:scale-105 backdrop-blur-md">
               <CalendarCheck size={18} />
               Agende sua consulta
             </button>

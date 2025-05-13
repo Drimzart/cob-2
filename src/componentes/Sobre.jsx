@@ -50,11 +50,11 @@ export default function Sobre() {
           >
             <img
               src="/imagens/ronald.png"
-              alt="Dr. Ronald"
+              alt="Dr. Ronald de Freitas Paixão"
               className="col-span-1 w-full h-full object-cover rounded-2xl border-4 border-[#053f79] shadow-md"
             />
             <div className="col-span-2 space-y-3">
-              <h3 className="text-xl font-bold text-[#053f79]">Dr. Ronald</h3>
+              <h3 className="text-xl font-bold text-[#053f79]">Dr. Ronald de Freitas Paixão</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {[
                   'CEO da COB Odontologia Integrada',
@@ -83,11 +83,11 @@ export default function Sobre() {
           >
             <img
               src="/imagens/milena.png"
-              alt="Dra. Milena"
+              alt="Dra. Milena Leite de Freitas Paixão"
               className="col-span-1 w-full h-full object-cover rounded-2xl border-4 border-[#053f79] shadow-md"
             />
             <div className="col-span-2 space-y-3">
-              <h3 className="text-xl font-bold text-[#053f79]">Dra. Milena</h3>
+              <h3 className="text-xl font-bold text-[#053f79]">Dra. Milena Leite de Freitas Paixão</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {[
                   'Sócia da COB Odontologia Integrada',

@@ -38,11 +38,11 @@ export default function Varal() {
               className={`flex flex-col items-center min-w-max bg-white text-[#053f79] p-2 shadow-lg rounded-sm ${rotacao}`}
               style={{ width: "150px", height: "190px" }}
             >
-              <img
-                src={`/imagens/${imagens[imagemIndex]}`}
-                alt={`Foto ${imagemIndex + 1}`}
-                className="w-full h-[140px] object-cover mb-2 border border-gray-300"
-              />
+             <img
+  src={`/imagens/${imagens[imagemIndex]}`}
+  alt={`Foto ${imagemIndex + 1}`}
+  className="w-full h-[140px] object-cover object-top mb-2 border border-gray-300"
+/>
               <span className="text-center text-sm font-semibold">{frase}</span>
             </div>
           );

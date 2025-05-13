@@ -43,7 +43,7 @@ export default function Footer() {
           <p className="text-sm mb-3">Acompanhe nossas transformações:</p>
           <div className="flex space-x-4">
             <a
-              href="#"
+              href="https://www.instagram.com/cobodontologiaintegrada/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-yellow-400 transition-colors"
@@ -51,7 +51,7 @@ export default function Footer() {
               <Instagram size={24} />
             </a>
             <a
-              href="#"
+              href="https://www.facebook.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-yellow-400 transition-colors"

@@ -7,7 +7,7 @@ export default function HeroSection() {
 
   useEffect(() => {
     let start = 0;
-    const end = new Date().getFullYear() - 1991;
+    const end = new Date().getFullYear() - 1992;
     const duration = 1000;
     const stepTime = Math.abs(Math.floor(duration / end));
 

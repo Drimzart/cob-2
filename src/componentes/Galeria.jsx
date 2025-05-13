@@ -3,15 +3,15 @@ import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const casos = [
-  { id: 1, nome: "Maria Souza", idade: 62, historia: "Recuperou seu sorriso após anos sem mastigar corretamente." },
-  { id: 2, nome: "João Silva", idade: 70, historia: "Voltou a sorrir sem medo depois da reabilitação oral." },
-  { id: 3, nome: "Ana Oliveira", idade: 58, historia: "Transformou sua autoestima após a colocação de próteses." },
-  { id: 4, nome: "Carlos Lima", idade: 65, historia: "Conseguiu melhorar a fala e a alimentação." },
-  { id: 5, nome: "Rita Mendes", idade: 67, historia: "Sente-se mais confiante e renovada com o novo sorriso." },
-  { id: 6, nome: "Pedro Ferreira", idade: 72, historia: "Redescobriu o prazer de sorrir naturalmente." },
-  { id: 7, nome: "Luciana Rocha", idade: 60, historia: "Após anos sem dentes, voltou a se sentir jovem." },
-  { id: 8, nome: "Marcos Duarte", idade: 66, historia: "Superou traumas dentários e voltou a sorrir." },
-  { id: 9, nome: "Eliane Costa", idade: 63, historia: "A saúde bucal trouxe qualidade de vida de volta." },
+  { id: 1, nome: "Edna de Oliveira", idade: 56, historia: "Recuperou seu sorriso após anos sem mastigar corretamente." },
+  { id: 2, nome: "Joelson de Sant Anna ", idade: 48, historia: "Voltou a sorrir sem medo depois da reabilitação oral." },
+  { id: 3, nome: "Elizete Máxima", idade: 71, historia: "Transformou sua autoestima após a colocação de próteses." },
+  { id: 4, nome: "Natalice Santana", idade: 45, historia: "Conseguiu melhorar a fala e a alimentação." },
+  { id: 5, nome: "Judite Gomes", idade: 67, historia: "Sente-se mais confiante e renovada com o novo sorriso." },
+  { id: 6, nome: "Josete Trabuco", idade: 65, historia: "Redescobriu o prazer de sorrir naturalmente." },
+  { id: 7, nome: "Moises Peixer", idade: 70, historia: "Após anos sem dentes, voltou a se sentir jovem." },
+  { id: 8, nome: "Cleverson Antunes", idade: 41, historia: "Superou traumas dentários e voltou a sorrir." },
+  { id: 9, nome: "David Lucas", idade: 31, historia: "A saúde bucal trouxe qualidade de vida de volta." },
 ];
 
 export default function Galeria() {
