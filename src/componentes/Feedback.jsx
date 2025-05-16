@@ -17,7 +17,7 @@ const feedbacks = [
 
 export default function Feedback() {
   return (
-    <section className="bg-white py-20 px-6">
+    <section className="bg-[#f8f9fa] py-20 px-6">
       <div className="max-w-6xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
@@ -35,7 +35,7 @@ export default function Feedback() {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
-              className="bg-slate-50 p-6 rounded-xl shadow-md text-center hover:shadow-lg"
+              className="bg-white p-6 rounded-2xl shadow-md text-center hover:shadow-xl transition"
             >
               <p className="text-gray-700 italic mb-4">"{item.texto}"</p>
               <h4 className="text-[#053f79] font-semibold">{item.nome}</h4>

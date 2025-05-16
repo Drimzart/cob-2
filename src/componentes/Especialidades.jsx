@@ -65,7 +65,6 @@ export default function Especialidades() {
     setEspecialidadeAtiva(null);
   };
 
-  // Fecha com ESC
   useEffect(() => {
     const handleEsc = (e) => {
       if (e.key === "Escape") fecharModal();
@@ -74,7 +73,6 @@ export default function Especialidades() {
     return () => document.removeEventListener("keydown", handleEsc);
   }, []);
 
-  // Fecha ao clicar fora do modal
   const handleClickFora = (e) => {
     if (modalRef.current && !modalRef.current.contains(e.target)) {
       fecharModal();
@@ -82,48 +80,52 @@ export default function Especialidades() {
   };
 
   return (
-    <section id="especialidades" className="bg-[#e8f1fa] py-20 px-6 relative">
+    <section id="especialidades" className="bg-[#e8f1fa] py-20 px-6 relative scroll-mt-24">
       <div className="max-w-7xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-4xl md:text-5xl font-bold text-center text-[#053f79] mb-16 font-serif"
+          className="text-4xl md:text-5xl font-bold text-center text-[#04416a] mb-16 font-serif"
         >
           Nossas Especialidades
         </motion.h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {especialidades.map((item, index) => (
-            <motion.div
+            <motion.article
               key={index}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               onClick={() => abrirModal(item)}
-              className="bg-white rounded-xl shadow-md p-4 flex flex-col items-center text-center hover:shadow-xl transition-shadow cursor-pointer"
+              className="bg-white rounded-2xl shadow-md p-4 hover:shadow-xl transition cursor-pointer"
+              aria-label={`Abrir especialidade ${item.nome}`}
             >
-              <img
-                src={item.imagem}
-                alt={item.nome}
-                className="rounded-lg object-cover w-full h-28 mb-2"
-              />
-              <h3 className="text-lg font-semibold text-[#053f79]">{item.nome}</h3>
-              <div className="flex space-x-1 mt-1">
+              <figure className="aspect-[4/3] w-full overflow-hidden rounded-lg mb-3">
+                <img
+                  src={item.imagem}
+                  alt={`Imagem representativa da especialidade ${item.nome}`}
+                  loading="lazy"
+                  className="object-cover w-full h-full"
+                />
+              </figure>
+              <h3 className="text-lg font-semibold text-[#04416a] text-center">{item.nome}</h3>
+              <div className="flex justify-center space-x-1 mt-1">
                 {[...Array(5)].map((_, i) => (
                   <Star
                     key={i}
                     size={18}
                     className="stroke-yellow-400 fill-yellow-400"
+                    aria-hidden="true"
                   />
                 ))}
               </div>
-            </motion.div>
+            </motion.article>
           ))}
         </div>
       </div>
 
-      {/* Modal com framer-motion e clique fora */}
       <AnimatePresence>
         {modalOpen && (
           <motion.div
@@ -133,10 +135,12 @@ export default function Especialidades() {
             exit={{ opacity: 0 }}
             onClick={handleClickFora}
             style={{
-              backgroundColor: "rgba(0, 0, 0, 0.1)",
+              backgroundColor: "rgba(0, 0, 0, 0.2)",
               backdropFilter: "blur(6px)",
               WebkitBackdropFilter: "blur(6px)",
             }}
+            aria-modal="true"
+            role="dialog"
           >
             <motion.div
               ref={modalRef}
@@ -148,12 +152,12 @@ export default function Especialidades() {
             >
               <button
                 onClick={fecharModal}
-                className="absolute top-3 right-3 text-gray-600 hover:text-[#053f79] transition-colors"
-                aria-label="Fechar"
+                className="absolute top-3 right-3 text-gray-600 hover:text-[#04416a] transition-colors"
+                aria-label="Fechar modal"
               >
                 <X size={24} />
               </button>
-              <h2 className="text-2xl font-bold text-[#053f79] mb-4">
+              <h2 className="text-2xl font-bold text-[#04416a] mb-4">
                 {especialidadeAtiva?.nome}
               </h2>
               <ul className="list-disc list-inside text-gray-700 space-y-2">
@@ -164,7 +168,7 @@ export default function Especialidades() {
               <div className="mt-6 text-right">
                 <button
                   onClick={fecharModal}
-                  className="px-4 py-2 bg-[#053f79] text-white rounded-xl hover:bg-[#072e59] transition"
+                  className="px-4 py-2 bg-[#04416a] text-white rounded-xl hover:bg-[#03324f] transition"
                 >
                   Fechar
                 </button>

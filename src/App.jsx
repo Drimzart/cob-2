@@ -7,6 +7,7 @@ import HeroSection from "./componentes/HeroSection";
 import Menu from "./componentes/Menu";
 import Sobre from "./componentes/Sobre";
 import Varal from "./componentes/Varal"
+import WhatsappButton from "./componentes/WhatsappButton";
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       <Galeria/>
       <Feedback/>
       <Formulario/>
+      <WhatsappButton/>
       <Footer/>
     </>
   );

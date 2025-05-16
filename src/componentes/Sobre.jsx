@@ -4,49 +4,43 @@ export default function Sobre() {
   return (
     <section id="sobre" className="bg-[#f8f9fa] py-20 px-6">
       <div className="max-w-7xl mx-auto">
+
         {/* Título */}
-        <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-3xl md:text-4xl font-bold text-[#053f79] mb-16 text-center font-serif tracking-tight"
-        >
-          Compromisso com Excelência e Inovação
-        </motion.h2>
+        <motion.div
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6 }}
+  className="grid md:grid-cols-2 items-center gap-10 max-w-6xl mx-auto mb-20"
+>
+  {/* Texto */}
+  <div className="text-center md:text-left text-gray-700 text-lg leading-relaxed space-y-6">
+    <p>
+      Na <span className="font-semibold text-[#053f79]">COB Odontologia Integrada</span>, acreditamos que o sorriso é a expressão máxima de felicidade e saúde.
+      Nossos princípios são fundamentados em atendimento humanizado, tecnologia de ponta e profissionais com formação de excelência.
+    </p>
+    <p>
+      Somos referência em inovação e resultados duradouros, promovendo experiências transformadoras para cada paciente que confia em nosso cuidado.
+    </p>
+  </div>
 
-        {/* Bloco de texto + imagem institucional */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-24">
-          <motion.img
-            src="/imagens/ronald-e-milena.png"
-            alt="Dr. Ronald e Dra. Milena"
-            className="rounded-3xl shadow-2xl w-full object-cover"
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-          />
+  {/* Imagem Ronald e Milena */}
+  <motion.img
+    src="/imagens/ronald-e-milena.png"
+    alt="Dr. Ronald e Dra. Milena - Sócios da COB Odontologia Integrada"
+    initial={{ opacity: 0, scale: 0.95 }}
+    whileInView={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.6 }}
+    className="rounded-3xl border border-white shadow-lg w-full object-cover max-h-[420px] hover:scale-105 transition-transform duration-300"
+  />
+</motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-gray-700 space-y-5 text-lg leading-relaxed"
-          >
-            <p>
-              Na <span className="font-semibold text-[#053f79]">COB Odontologia Integrada</span>, acreditamos que o sorriso é a expressão máxima de felicidade e saúde. Nossos princípios são fundamentados em atendimento humanizado, tecnologia de ponta e profissionais com formação de excelência.
-            </p>
-            <p>
-              Somos referência em inovação e resultados duradouros, promovendo experiências transformadoras para cada paciente que confia em nosso cuidado.
-            </p>
-          </motion.div>
-        </div>
-
-        {/* Cards estilo FIFA */}
+        {/* Cards */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Card Ronald */}
+          {/* Ronald */}
           <motion.div
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.4 }}
-            className="bg-gradient-to-br from-[#eaf3fb] to-white p-6 rounded-3xl shadow-2xl grid grid-cols-3 gap-6 items-start"
+            className="bg-white p-6 rounded-3xl shadow-xl grid grid-cols-3 gap-6 items-start"
           >
             <img
               src="/imagens/ronald.png"
@@ -64,22 +58,22 @@ export default function Sobre() {
                   'Prof. Titular - UEFS',
                   'Coord. da Pós em Ortodontia - Avance',
                 ].map((item, i) => (
-                  <div
+                  <span
                     key={i}
-                    className="bg-[#053f79] text-white text-sm py-2 px-3 rounded-lg shadow-md hover:bg-blue-900 transition-all"
+                    className="bg-[#053f79] text-white text-sm py-2 px-3 rounded-lg shadow-md hover:bg-blue-900 transition"
                   >
                     {item}
-                  </div>
+                  </span>
                 ))}
               </div>
             </div>
           </motion.div>
 
-          {/* Card Milena */}
+          {/* Milena */}
           <motion.div
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.4 }}
-            className="bg-gradient-to-br from-[#eaf3fb] to-white p-6 rounded-3xl shadow-2xl grid grid-cols-3 gap-6 items-start"
+            className="bg-white p-6 rounded-3xl shadow-xl grid grid-cols-3 gap-6 items-start"
           >
             <img
               src="/imagens/milena.png"
@@ -97,12 +91,12 @@ export default function Sobre() {
                   'Especialista em Imaginologia',
                   'Especialista em Prótese Dental',
                 ].map((item, i) => (
-                  <div
+                  <span
                     key={i}
-                    className="bg-[#053f79] text-white text-sm py-2 px-3 rounded-lg shadow-md hover:bg-blue-900 transition-all"
+                    className="bg-[#053f79] text-white text-sm py-2 px-3 rounded-lg shadow-md hover:bg-blue-900 transition"
                   >
                     {item}
-                  </div>
+                  </span>
                 ))}
               </div>
             </div>
